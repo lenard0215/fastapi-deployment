@@ -1,0 +1,1 @@
+web gunicorn shellz-app.wsgi:application
