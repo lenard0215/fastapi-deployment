@@ -1,1 +1,1 @@
-web gunicorn shellz-app.wsgi:application
+web gunicorn shellz-app.wsgi:application --log-file -
