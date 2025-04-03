@@ -6,7 +6,7 @@ from psycopg2.extras import RealDictCursor
 import time
 from .config import settings
 
-ENV = 'Prod'
+ENV = 'Dev'
 if ENV == 'Dev':
     #SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:AuriJoe0215@localhost/retrofitapp'
     SQLALCHEMY_DATABASE_URL = f'postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
