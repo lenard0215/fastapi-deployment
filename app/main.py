@@ -16,7 +16,7 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 
 app= FastAPI()
 
-origins = ['http://0.0.0.0:8000']
+origins = ['*']
 
 app.add_middleware(
     CORSMiddleware,     
