@@ -1,8 +1,9 @@
 
-from sqlalchemy import  ARRAY, JSON, Boolean, Column, ForeignKey, Integer, String
+
 from .database import Base
 from sqlalchemy.sql.expression import text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
+from sqlalchemy import  ARRAY, JSON, Boolean, Column, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 
 class User2(Base):
@@ -76,5 +77,4 @@ class Contents(Base):
     slider_images = Column(ARRAY(JSON), nullable=True)
     slider2_images = Column(ARRAY(JSON), nullable=True)
     slider2_videos = Column(ARRAY(JSON), nullable=True)
-    
 
