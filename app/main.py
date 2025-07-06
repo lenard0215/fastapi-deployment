@@ -24,7 +24,7 @@ app= FastAPI()
                 #reload = True)
 
 
-origins = ['*']
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,     

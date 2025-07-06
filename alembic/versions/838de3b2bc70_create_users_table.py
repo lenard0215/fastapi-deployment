@@ -20,14 +20,15 @@ depends_on: Union[str, Sequence[str], None] = None
 def upgrade(): 
     op.create_table(
     'users', sa.Column('id', sa.Integer, primary_key=True, nullable=False),
-     sa.Column('first_name',sa.String, nullable=False),
-     sa.Column('last_name', sa.String, nullable=False),
-     sa.Column('user_name', sa.String, nullable=False),
-     sa.Column('email',sa.String, nullable=False, unique=True),
-     sa.Column('password', sa.String, nullable=False),
-    sa.Column('bio',sa.String, nullable=True),
-    sa.Column('profile_picture', sa.String, nullable=True),
+     sa.Column('first_name',sa.String(100), nullable=False),
+     sa.Column('last_name', sa.String(100), nullable=False),
+     sa.Column('user_name', sa.String(100), nullable=False),
+     sa.Column('email',sa.String(100), nullable=False, unique=True),
+     sa.Column('password', sa.String(100), nullable=False),
+    sa.Column('bio',sa.String(250), nullable=True),
+    sa.Column('profile_picture', sa.String(50), nullable=True),
     sa.Column('created_at', sa.TIMESTAMP(timezone=True), nullable=False, server_default=sa.text('now()')))
+    sa.Column('images', sa.ARRAY(sa.JSON), nullable=True),
     #sa.PrimaryKeyConstraint('id'),
     #sa.UniqueConstraint('email')
     pass
