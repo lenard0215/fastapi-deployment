@@ -30,11 +30,11 @@ def upgrade():
     sa.Column('video_url', sa.String(100), nullable=True),
     sa.Column('image_url', sa.String(100), nullable=True),    
     sa.Column('created_at', sa.TIMESTAMP(timezone=True), nullable=False, server_default=sa.text('now()')),
-    sa.Column('images', sa.ARRAY(JSON), nullable=True),
-    sa.Column('videos', sa.ARRAY(JSON), nullable=True),
-    sa.Column('slider_images', sa.ARRAY(JSON), nullable=True),
-    sa.Column('slider2_images', sa.ARRAY(JSON), nullable=True),
-    sa.Column('slider2_videos', sa.ARRAY(JSON), nullable=True)),
+    sa.Column('images', sa.ARRAY(sa.JSON), nullable=True),
+    sa.Column('videos', sa.ARRAY(sa.JSON), nullable=True),
+    sa.Column('slider_images', sa.ARRAY(sa.JSON), nullable=True),
+    sa.Column('slider2_images', sa.ARRAY(sa.JSON), nullable=True),
+    sa.Column('slider2_videos', sa.ARRAY(sa.JSON), nullable=True)),
     pass
 
 
