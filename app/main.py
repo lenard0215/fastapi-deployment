@@ -12,7 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 
 
-#models.Base.metadata.create_all(bind=engine)
+models.Base.metadata.create_all(bind=engine)
 
 app= FastAPI()
 
@@ -22,7 +22,6 @@ app= FastAPI()
                 #port = 8080,
                 #log_level = "debug",
                 #reload = True)
-
 
 origins = ["*"]
 
